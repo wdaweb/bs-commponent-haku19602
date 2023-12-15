@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 1. 引入 bootstrap.css -->
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <style>
+    .bg-opacity {
+      opacity: .8;
+      background-color: black;
+    }
+
+    /* 輪播 */
+    .carousel-item img {
+      object-fit: cover;
+    }
+
+
+    #carousel.carousel {
+      height: 100%;
+    }
+
+    #carousel .carousel-inner {
+      height: 100%;
+    }
+
+    #carousel .carousel-item {
+      height: 100%;
+    }
+
+    #carousel .carousel-item img {
+      height: 100%;
+    }
+
+    /* 底色灰 */
+    #myForm,
+    #myShop .col {
+      background-color: var(--bs-gray-200);
+    }
+
+    .img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-image: url("https://picsum.photos/150/150/?random=10");
+      object-fit: contain;
+    }
+
+    @media(min-width: 992px) {
+
+      #myCarousel,
+      #myCard,
+      #myMap,
+      #myMap iframe,
+      #myForm {
+        height: 100vh;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ========== 導覽列 -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-opacity fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">泰山咖啡莊園</a>
+      <!-- data-bs-toggle="offcanvas" 觸發側邊欄的功能， data-bs-target="#haku" 觸發的目標-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-start bg-opacity" id="nav">
+        <!-- header -->
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-white">Menu</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <!-- body -->
+        <div class="offcanvas-body">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">菜單餐點</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">周邊景點</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">莊園位置</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">聯絡我們</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">咖啡故事</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== 輪播 -->
+  <div id="myCarousel">
+    <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
+      <!-- 指示器 -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- 圖片 -->
+      <div class="carousel-inner">
+        <!-- carousel-item 為一個輪播單位，一定要設定 .active，表示從該項目開始啟動撥放 -->
+        <div class="carousel-item active">
+          <img src="https://picsum.photos/1680/1080/?random=1" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/1680/1080/?random=2" class="d-block w-100">
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/1680/1080/?random=3" class="d-block w-100">
+        </div>
+      </div>
+
+      <!-- 上一頁 -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <!-- 下一頁 -->
+      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ========== 三欄卡片 -->
+  <div id="myCard">
+    <div class="container h-100">
+      <div class="row h-100 align-items-lg-center">
+        <div class="col-lg-4 p-3">
+          <div class="card">
+            <img class="card-img-top" src="https://picsum.photos/1680/1080/?random=4">
+            <div class="card-body">
+              <h5 class="card-title">內心必須威脅富岡多。</h5>
+              <p class="card-text">
+                軟體一張風景樂隊消除上帝，接口一直身後禮品解壓西方字幕招生本次任意誠信，交友不可能堅持，鐵路毫不東京分配隨便更為引進區域，她說對著屬性均為授權方式法律及時訊息患者部分，呼吸以後論壇快樂黑暗玄幻上有春天試驗業績，那裡兒童出來，號碼竟然，來的的是，素質厲害幫。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 p-3">
+          <div class="card">
+            <img class="card-img-top" src="https://picsum.photos/1680/1080/?random=5">
+            <div class="card-body">
+              <h5 class="card-title">內心必須威脅富岡多。</h5>
+              <p class="card-text">
+                軟體一張風景樂隊消除上帝，接口一直身後禮品解壓西方字幕招生本次任意誠信，交友不可能堅持，鐵路毫不東京分配隨便更為引進區域，她說對著屬性均為授權方式法律及時訊息患者部分，呼吸以後論壇快樂黑暗玄幻上有春天試驗業績，那裡兒童出來，號碼竟然，來的的是，素質厲害幫。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 p-3">
+          <div class="card">
+            <img class="card-img-top" src="https://picsum.photos/1680/1080/?random=6">
+            <div class="card-body">
+              <h5 class="card-title">內心必須威脅富岡多。</h5>
+              <p class="card-text">
+                軟體一張風景樂隊消除上帝，接口一直身後禮品解壓西方字幕招生本次任意誠信，交友不可能堅持，鐵路毫不東京分配隨便更為引進區域，她說對著屬性均為授權方式法律及時訊息患者部分，呼吸以後論壇快樂黑暗玄幻上有春天試驗業績，那裡兒童出來，號碼竟然，來的的是，素質厲害幫。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========== coffee shop圖文 -->
+  <div id="myShop">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 p-0">
+          <img class="w-100" src="https://picsum.photos/1320/1080/?random=7">
+        </div>
+
+        <div class="col col-lg-6 p-0 text-center d-flex align-items-center">
+          <div class="info p-5">
+            <h1>Coffee Shop</h1>
+            <p>
+              一段時間讓我們世界盃特點適當，鏡頭夫人解決支撐預覽性質電信機構湖北輔助，電信當然能不能榮譽還不，有時候你有怎樣以為反覆實用導致整合只有，你想責任編輯計算哥哥建立一個月辦理通信不到統計說到一面反覆，只需障礙擁有你可以不代表想要藍色預防不見，網易吃飯也許，傢。
+            </p>
+            <a href="#" class="btn btn-success">VIEW COLLECTION</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row flex-lg-row-reverse">
+
+        <div class="col-lg-6 p-0">
+          <img class="w-100" src="https://picsum.photos/1320/1080/?random=8">
+        </div>
+
+        <div class="col col-lg-6 text-center d-flex align-items-center">
+          <div class="info p-5">
+            <h1>Coffee Shop</h1>
+            <p>
+              一段時間讓我們世界盃特點適當，鏡頭夫人解決支撐預覽性質電信機構湖北輔助，電信當然能不能榮譽還不，有時候你有怎樣以為反覆實用導致整合只有，你想責任編輯計算哥哥建立一個月辦理通信不到統計說到一面反覆，只需障礙擁有你可以不代表想要藍色預防不見，網易吃飯也許，傢。
+            </p>
+            <a href="#" class="btn btn-success">VIEW COLLECTION</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 地圖 -->
+  <div id="myMap" class="m-0 p-0">
+    <iframe class="w-100"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.703649326451!2d121.41500948885499!3d25.044129300000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7bec9ad74b1%3A0xa639904a89f26435!2z5Yue5YuV6YOo5Yue5YuV5Yqb55m85bGV572y5YyX5Z-65a6c6Iqx6YeR6aas5YiG572y5rOw5bGx6IG35qWt6KiT57e05aC0!5e0!3m2!1szh-TW!2stw!4v1701678331964!5m2!1szh-TW!2stw"
+      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+
+  <!-- ========== 聯絡我們 -->
+  <div id="myForm" class="w-100 d-flex align-items-lg-center justify-content-center">
+    <form>
+      <div class="container">
+        <div class="row">
+          <!-- 1 -->
+          <div class="col-12 text-center mt-5 mb-3">
+            <h1 class="p-2">聯絡我們</h1>
+            <h4>泰山咖啡莊園．傳承熱情 coding 精神</h4>
+            <p>任何服務問題或建議，歡迎您透過客服表單告知我們，謝謝!</p>
+          </div>
+
+          <!-- 2 -->
+          <div class="col-lg-6 mb-3">
+            <label for="name" class="form-label">姓名</label>
+
+            <div class="input-group">
+              <!-- 輸入格 -->
+              <input type="text" class="form-control" id="name">
+              <!-- 單選 -->
+              <div class="input-group-text">
+                <label class="form-check-label pe-1" for="male">先生</label>
+                <input class="form-check-input mt-0 pe-3" type="radio" name="gender" id="male">
+                <label class="form-check-label pe-1" for="female">女士</label>
+                <input class="form-check-input mt-0" type="radio" name="gender" id="female">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mb-3">
+            <label for="phone" class="form-label">電話</label>
+            <input type="tel" class="form-control" id="phone">
+          </div>
+
+          <!-- 3 -->
+          <div class="col-lg-6 mb-3">
+            <label for="email" class="form-label">電子郵件</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+
+          <div class="col-lg-6 mb-3">
+            <label for="question" class="form-label">問題類型</label>
+            <select class="form-select" id="question">
+              <option selected>餐飲建議</option>
+              <option value="1">餐飲建議 One</option>
+              <option value="2">餐飲建議 Two</option>
+              <option value="3">餐飲建議 Three</option>
+            </select>
+          </div>
+
+          <!-- 4 -->
+          <div class="col-12 mb-3">
+            <label for="comment" class="form-label">意見需求</label>
+            <textarea class="form-control" id="comment" rows="5"></textarea>
+          </div>
+
+          <!-- 5 -->
+          <div class="col-12 mb-3">
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="subscrib">
+              <label class="form-check-label" for="subscrib">訂閱泰山莊園最新消息</label>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="col-12">
+            <button type="submit" class="btn btn-secondary d-block m-auto mb-3">送出</button>
+          </div>
+
+
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <!-- ========== footer -->
+  <div id="footer" class="bg-black p-5 text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-lg-3">
+          <div class="img"></div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="mb-1 fw-bolder">Address</div>
+          <p>1234 Street Name <br>City, AA 99999</p>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="mb-1 fw-bolder">Links</div>
+          <p>Website builder<br>Download for Windows<br>Download for Mac</p>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <div class="mb-1 fw-bolder">Contacts</div>
+          <p>Email: support@mobirise.com<br>Phone: +1 (0) 000 0000 001<br>Fax: +1 (0) 000 0000 002</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col text-center">@Copyright 2023 YungHsin Pai - All Rights Reserved</div>
+      </div>
+    </div>
+
+
+
+
+
+    <!-- 2. 引入 bootstrap.bundle.js 才可以使用元件 -->
+    <script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
